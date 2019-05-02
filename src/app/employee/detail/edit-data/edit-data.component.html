@@ -1,0 +1,58 @@
+<h4>Información de empleado</h4>
+
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-4">
+        <img src="http://localhost:3000/default-user.png" width="100px">
+      </div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-6">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" class="form-control" type="text" formControlName="name">
+            </div>
+            <div>
+              <label for="surname">Apellido</label>
+              <input id="surname" class="form-control" type="text" formControlName="surname">
+            </div>
+            <div>
+              <label for="birthday">Fecha de nacimiento</label>
+              <div class="input-group">
+                <input id="birthday" class="form-control" placeholder="yyyy-mm-dd" name="dp" formControlName="birthday"
+                  ngbDatepicker #d="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div>
+              <label for="num_empl">Número de empleado</label>
+              <input id="num_empl" class="form-control" type="text" formControlName="num_employee">
+            </div>
+            <div>
+              <label for="category">Categoría</label>
+              <select id="category" class="form-control" name="select" formControlName="category">
+                <option>Seleccione categoría</option>
+                <option *ngFor="let category of categories" [ngValue]="category.id">{{category.value}}</option>
+              </select>
+            </div>
+            <div>
+              <label for="isInt">Interno?</label>
+              <input id="isInt" type="checkbox" formControlName="isInt">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-4">
+        <div class="btn-group float-right">
+          <button type="button" class="btn btn-danger ml-2" (click)="cancelEdit()">Cancelar</button>
+          <button type="submit" class="btn btn-success  ml-2" [disabled]="!employeeForm.valid">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

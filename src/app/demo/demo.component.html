@@ -1,0 +1,12 @@
+<h2>JavaScript Books</h2>
+
+<p>
+  <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed">
+    <span *ngIf="isCollapsed">Expand list</span>
+    <span *ngIf="!isCollapsed">Collapse list</span>
+  </button>
+</p>
+
+<ul  [ngbCollapse]="isCollapsed">
+  <li *ngFor="let book of books">{{ book.title }} - {{ book.author }}</li>
+</ul>

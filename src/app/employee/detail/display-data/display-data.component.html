@@ -1,0 +1,41 @@
+<h4>Información de empleado</h4>
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-4">
+      <img src="http://localhost:3000/default-user.png" width="100px">
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-6">
+          <div>
+            <label for="name">Name</label>
+            <p>{{employee?.name}}</p>
+          </div>
+          <div>
+            <label for="surname">Apellido</label>
+            <p>{{employee?.surname}}</p>
+          </div>
+          <div>
+            <label for="name">Fecha de nacimiento</label>
+            <p>{{employee?.birthday.day}}/{{employee?.birthday.month}}/{{employee?.birthday.year}}</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div>
+            <label for="name">Número de empleado</label>
+            <p>{{employee?.num_employee}}</p>
+          </div>
+          <div>
+            <label for="surname">Categoría</label>
+            <p>{{employee?.category}}</p>
+          </div>
+          <div>
+            <label for="name">Empleado interno?</label>
+            <p>{{employee?.isInt ? 'Interno' : 'Externo'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container" *ngIf="isEditData">
+  <app-edit-data [employee]="employee" (cancelEdit$)="changeAction()"></app-edit-data>
+</div>
+
+<div class="container" *ngIf="!isEditData">
+  <app-display-data [employee]="employee"></app-display-data>
+</div>
+
+<div class="container pt-4">
+  <div class="btn-group float-right">
+    <button type="button" class="btn btn-danger  ml-2" (click)="deleteEmployee()" *ngIf="!isEditData">Delete</button>
+    <button type="button" class="btn btn-success ml-2" (click)="changeAction()" *ngIf="!isEditData">Editar</button>
+  </div>
+</div>

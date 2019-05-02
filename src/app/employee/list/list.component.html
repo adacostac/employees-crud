@@ -1,0 +1,22 @@
+<h4>Información de empleado</h4>
+
+<div class="container pt-4">
+  <table class="table table-hover table-borderless text-center">
+    <thead class="thead-light">
+      <tr>
+        <th *ngFor="let title of titles">{{title}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="element-hover" *ngFor="let employee of listEmployee" routerLink="/employees/{{employee.id}}">
+        <img class="pt-2" [src]="employee.url_photo" width="50px;">
+        <td>{{employee.name}} {{employee.surname}}</td>
+        <td>{{employee.category}}</td>
+        <td>{{employee.isInt ? 'Interno' : 'Externo'}}</td>
+        <td>{{employee.num_employee}}</td>
+        <td>{{employee.birthday.day}}/{{employee.birthday.month}}/{{employee.birthday.year}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary float-right" routerLink="/employees/new">Agregar</button>
+</div>

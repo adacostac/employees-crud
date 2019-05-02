@@ -1,0 +1,50 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "value": "SA"
+    },
+    {
+      "id": 1,
+      "value": "SK"
+    },
+    {
+      "id": 2,
+      "value": "SKL"
+    },
+    {
+      "id": 3,
+      "value": "TL"
+    }
+  ],
+  "employees": [
+    {
+      "id": 16,
+      "name": "Alice",
+      "surname": "Da Costa",
+      "birthday": {
+        "year": 2019,
+        "month": 4,
+        "day": 1
+      },
+      "num_employee": "1111",
+      "category": 0,
+      "isInt": true,
+      "url_photo": "http://localhost:3000/default-user.png"
+    },
+    {
+      "id": 17,
+      "name": "Pedro",
+      "surname": "Perez",
+      "birthday": {
+        "year": 2019,
+        "month": 4,
+        "day": 1
+      },
+      "num_employee": "1111",
+      "category": 0,
+      "isInt": true,
+      "url_photo": "http://localhost:3000/default-user.png"
+    }
+  ]
+}
